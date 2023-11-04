@@ -1,6 +1,5 @@
 import {
-    createBrowserRouter,
-    HashRouter,
+    createHashRouter,
     RouterProvider,
 } from 'react-router-dom';
 import { childHeroesRoutes, HeroesRoutes } from '../heroes';
@@ -8,7 +7,7 @@ import { LoginPage } from '../auth';
 import { PrivateRoute } from './PrivateRoute';
 import { PublicRoute } from './PublicRoute';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
     {
         path: "/login",
         element:
@@ -32,7 +31,7 @@ const router = createBrowserRouter([
 export const AppRouter = () =>{
     return( 
         <>
-                <RouterProvider router={router} />
+            <RouterProvider  router={router} />
         </>
     )
 }

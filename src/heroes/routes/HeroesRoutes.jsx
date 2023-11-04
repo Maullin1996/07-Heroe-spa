@@ -1,7 +1,7 @@
 
 import { Dcpage, HeroPage, MarvelPage, SearchPage } from "../pages";
 import { Navbar } from "../../ui";
-import { HashRouter, Navigate, Outlet } from "react-router-dom";
+import { Navigate, Outlet } from "react-router-dom";
 
 export const childHeroesRoutes = [
 
