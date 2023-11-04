@@ -1,7 +1,7 @@
 
 import { Dcpage, HeroPage, MarvelPage, SearchPage } from "../pages";
 import { Navbar } from "../../ui";
-import { Navigate, Outlet } from "react-router-dom";
+import { HashRouter, Navigate, Outlet } from "react-router-dom";
 
 export const childHeroesRoutes = [
 
@@ -30,9 +30,9 @@ export const childHeroesRoutes = [
 export const HeroesRoutes = () => {
     return (
         <>
-            <Navbar />
-                <div className="container">
-                    <Outlet/>
+                <Navbar />
+                    <div className="container">
+                        <Outlet/>
                 </div>
         </>
     );

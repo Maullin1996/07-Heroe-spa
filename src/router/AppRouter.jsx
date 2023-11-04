@@ -1,5 +1,6 @@
 import {
     createBrowserRouter,
+    HashRouter,
     RouterProvider,
 } from 'react-router-dom';
 import { childHeroesRoutes, HeroesRoutes } from '../heroes';
@@ -11,9 +12,9 @@ const router = createBrowserRouter([
     {
         path: "/login",
         element:
-        <PublicRoute>
-            <LoginPage />
-        </PublicRoute>
+            <PublicRoute>
+                <LoginPage />
+            </PublicRoute>
         ,
     },
     {
@@ -31,7 +32,7 @@ const router = createBrowserRouter([
 export const AppRouter = () =>{
     return( 
         <>
-            <RouterProvider router={router} />
+                <RouterProvider router={router} />
         </>
     )
 }
