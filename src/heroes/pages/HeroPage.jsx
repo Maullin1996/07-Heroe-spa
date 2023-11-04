@@ -19,7 +19,7 @@ export const HeroPage = () => {
         navigate(-1)
     }
 
-    const heroImageUrl = `./assets/heroes/${id}.jpg`;
+    const heroImageUrl = `./assets/heroes/${ id }.jpg`;
 
 // si no tenemos un heroe = !hero me manda a la página de marvel
     if ( !hero ){
