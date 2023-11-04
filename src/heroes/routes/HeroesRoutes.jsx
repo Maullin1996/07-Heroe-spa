@@ -22,7 +22,7 @@ export const childHeroesRoutes = [
         element: <HeroPage />,
     },
     {
-        path: "/*",
+        path: "/",
         element: <Navigate to = {"/marvel"}/>
     },
 ];

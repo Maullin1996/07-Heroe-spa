@@ -1,6 +1,7 @@
 
+import { useContext } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
-
+import { AuthContext } from '../../auth/context/AuthContext';
 
 export const Navbar = () => {
 
@@ -8,16 +9,20 @@ export const Navbar = () => {
     Para poder encontrar este Hook hay que ir a las rutas
     en el navegador "Navigation.Provider" en el apartado
     de push replace */
-    
+    const { user, logout } = useContext( AuthContext );
+
     const navigate = useNavigate();
 
     /*El replace se utliza para reemplazar la ruta que 
     se estaba viendo */
     const onLogout = () => {
+
+        logout();
         navigate('/login', {
             replace: true
         });
     }
+
 
     return (
         <nav className="navbar navbar-expand-sm navbar-dark bg-dark p-2">
@@ -60,7 +65,7 @@ export const Navbar = () => {
                 <ul className="navbar-nav ml-auto">
 
                     <span className='nav-item nav-link text-primary'>
-                        Mauricio
+                        {user}
                     </span>
 
                     <button
