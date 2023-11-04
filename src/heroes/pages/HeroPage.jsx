@@ -16,8 +16,7 @@ export const HeroPage = () => {
     const hero = useMemo( () => getHeroById( id ), [id]);
 
     const onNavigateBack = () => {
-        hero.publisher === 'Marvel Comics' ? navigate('/marvel') : navigate('/dc');
-        
+        navigate(-1)
     }
 
 // si no tenemos un heroe = !hero me manda a la página de marvel
@@ -26,7 +25,7 @@ export const HeroPage = () => {
     }
 
     return (
-        <div className="row m-5  animate__animated animate__fadeInLeft">
+        <div className="row m-5  animate__animated animate__bounceInLeft">
             <div className="col-4">
                 <img
                     src={ `/assets/heroes/${ id }.jpg` }
