@@ -19,6 +19,8 @@ export const HeroPage = () => {
         navigate(-1)
     }
 
+    const heroImageUrl = `./assets/heroes/${id}.jpg`;
+
 // si no tenemos un heroe = !hero me manda a la página de marvel
     if ( !hero ){
         return <Navigate to="/marvel"/>
@@ -28,7 +30,7 @@ export const HeroPage = () => {
         <div className="row m-5  animate__animated animate__bounceInLeft">
             <div className="col-4">
                 <img
-                    src={ `/assets/heroes/${ id }.jpg` }
+                    src={ heroImageUrl }
                     alt={ hero.superhero }
                     className="img-thumbnail"
                 />
