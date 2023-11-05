@@ -2,6 +2,7 @@
 import { useContext } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../auth/context/AuthContext';
+import '../../styless.css'
 
 export const Navbar = () => {
 
@@ -25,6 +26,7 @@ export const Navbar = () => {
 
 
     return (
+        <div className='backgroundcolor'>
         <nav className="navbar navbar-expand-sm navbar-dark bg-dark p-2">
             
             <Link 
@@ -78,5 +80,6 @@ export const Navbar = () => {
                 </ul>
             </div>
         </nav>
+        </div>
     )
 }

@@ -1,4 +1,5 @@
 import { HeroList } from '../components';
+import '../../styless.css'
 
 export const Dcpage = () => {
     /*
@@ -7,9 +8,9 @@ export const Dcpage = () => {
     console.log(HeroList({publisher:'DC Comics'}))*/
     return (
         <>
-            <h1>DC Comics</h1>
-            <hr />
-            <HeroList publisher='DC Comics'/>
+                <h1>DC Comics</h1>
+                <hr />
+                <HeroList publisher='DC Comics'/>
         </>
     );
 }

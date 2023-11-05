@@ -3,6 +3,7 @@ import { useForm } from '../../hooks/useForm';
 import { HeroCard } from '../components';
 import queryString from 'query-string'
 import { getHeroesByName } from '../helpers';
+import '../../styless.css'
 
 export const SearchPage = () => {
 
