@@ -13,7 +13,7 @@ export const LoginPage = () => {
     });
     const navigate = useNavigate();
 
-    const onUserName = (event) => {
+    const onLogin = (event) => {
         event.preventDefault();
         if ( userName.trim().length <=1 ) return;
         const lastPath = localStorage.getItem('lastPath') || '/';
@@ -27,7 +27,7 @@ export const LoginPage = () => {
                 <h1> Login </h1>
                 <hr/>
 
-                <form onSubmit={ onUserName }>
+                <form onSubmit={ onLogin }>
                     <input
                         type="text"
                         placeholder='Nombre del usuario'
@@ -40,7 +40,7 @@ export const LoginPage = () => {
                     <br/>
                         <button 
                             className="btn btn-primary mx-auto d-block"
-                            onClick={ onUserName }
+                            onClick={ onLogin }
                         >
                             Login
                         </button>
