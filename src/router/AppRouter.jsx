@@ -18,12 +18,13 @@ const router = createHashRouter([
     },
     {
         path: "/",
-        element:
-        <PrivateRoute>
-            <HeroesRoutes/>
-        </PrivateRoute>,
+        element:(
+            <PrivateRoute>
+                <HeroesRoutes/>
+            </PrivateRoute>
+        ),
         children: childHeroesRoutes
-    }
+    },
 ]);
 
 
